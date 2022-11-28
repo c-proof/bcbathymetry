@@ -1,4 +1,6 @@
 # bcbathymetry
+![Plot!](/cproof/data/BCNorth0000to0400.png)
+
 Making rasters and kmls for sfmc (and Glimpse?)
 
 ## layers and KMLs for SFMC and maybe glimpse for cproof:
