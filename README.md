@@ -7,7 +7,7 @@ Making rasters and kmls for sfmc (and Glimpse?)
 
 Note rasters are made here with `plotBC_DEM.py` and saved to `cproof/data` or `kmls`.   The `cproof/data` directory needs to be synced to `/usr/local/opt/mapserver/cproof/`.  Note that the file `/usr/local/etc/mapserver.conf` should also be updated to make shortforms for the maps to save typing the whole pathname
 
-Note you need a copy of `british_columbia_3_msl_2013.nc`
+Note you need a copy of `british_columbia_3_msl_2013.nc` <https://www.ngdc.noaa.gov/thredds/fileServer/regional/british_columbia_3_msl_2013.nc>
 
 ## Install mapserver
 - install mapserver: `brew install mapserver`
