@@ -1,0 +1,47 @@
+MAP
+  NAME "BCNetcdf"
+  IMAGETYPE      PNG24
+  EXTENT         -137.45 48.05 -122.2 54.2
+  SIZE           790 360
+  SHAPEPATH      "./data/"
+  IMAGECOLOR     200 200 200
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  WEB
+    METADATA
+      wms_allow_getmap_without_styles "true"
+      ows_allow_getmap_without_styles "true"
+      ows_title "MapServer Raster"
+      ows_enable_request "*"
+      ows_srs "EPSG:4326"
+      ows_onlineresource  "https://cproof.uvic.ca/cgi-bin/mapserv?map=/usr/local/opt/mapserver/cproof/BCNorth1000.map"    END
+  END
+
+  LAYER
+    NAME "BCNetcdf"
+    STATUS OFF
+    TYPE RASTER
+    DATA "netcdf:/usr/local/opt/mapserver/data/british_columbia_3_msl_2013.nc"
+    PROJECTION
+      "init=epsg:4326"
+    END
+
+    METADATA
+        wcs_label "BCNetcdf"
+        ows_extent '-137.45 48.05 -122.2 54.2'
+        wcs_resolution '0.00083333333 -0.00083333333'
+        ows_srs "EPSG:4326"
+        wcs_formats "GEOTIFF_FLOAT"
+        wcs_nativeformat "netCDF"
+        wcs_bandcount "1"
+        wcs_rangeset_axes "lon lat"
+        wcs_rangeset_name "Band1"
+        # wcf_NETCDF_VARNAME "Band1"
+    END
+  END
+
+
+END
